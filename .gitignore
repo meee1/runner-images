@@ -397,3 +397,6 @@ launch.json
 
 # Ignore dynamic template
 images/*/*-temp.json
+
+# Packer variable files (may contain API tokens)
+*.pkrvars.hcl

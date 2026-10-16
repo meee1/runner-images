@@ -77,6 +77,9 @@ source "proxmox-clone" "image" {
 
   # ponytail: no `disks` block on purpose - it REPLACES the cloned disk.
   # Size the root disk on the base template instead (100G), cloud-init grows it.
+  # The builder defaults scsi_controller to lsi, overriding whatever the base template had.
+  scsi_controller = "virtio-scsi-single"
+
   cores        = var.proxmox_cores
   sockets      = 1
   memory       = var.proxmox_memory

@@ -3,6 +3,21 @@ build {
   name = "ubuntu-26_04"
 
   provisioner "shell" {
+    # Cloud-init hands over SSH while apt-daily still holds the dpkg lock, so the first
+    # script to call dpkg dies. configure-apt.sh disables these timers for good, but it
+    # runs fourth - by then install-ms-repos.sh has already failed.
+    # Also pre-create waagent.conf, which configure-environment.sh seds unconditionally.
+    only            = ["proxmox-clone.image"]
+    execute_command = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
+    inline          = [
+      "cloud-init status --wait || true",
+      "systemctl stop apt-daily.timer apt-daily-upgrade.timer unattended-upgrades.service || true",
+      "while pgrep -x apt-get >/dev/null || pgrep -x dpkg >/dev/null || pgrep -x unattended-upgr >/dev/null; do sleep 5; done",
+      "touch /etc/waagent.conf"
+    ]
+  }
+
+  provisioner "shell" {
     execute_command = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
     inline          = ["mkdir ${var.image_folder}", "chmod 777 ${var.image_folder}"]
   }
@@ -68,13 +83,6 @@ build {
     environment_vars = ["HELPER_SCRIPTS=${var.helper_script_folder}", "IMAGE_VERSION=${var.image_version}", "IMAGEDATA_FILE=${var.imagedata_file}"]
     execute_command  = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
     scripts          = ["${path.root}/../scripts/build/configure-image-data.sh"]
-  }
-
-  provisioner "shell" {
-    # ponytail: configure-environment.sh seds /etc/waagent.conf unconditionally
-    only            = ["proxmox-clone.image"]
-    execute_command = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
-    inline          = ["touch /etc/waagent.conf"]
   }
 
   provisioner "shell" {
@@ -194,6 +202,9 @@ provisioner "shell" {
   provisioner "shell" {
     execute_command   = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
     expect_disconnect = true
+    # expect_disconnect covers the reboot itself, but Packer still tries to rm the temp
+    # script afterwards and errors with "no route to host". cleanup.sh wipes /tmp anyway.
+    skip_clean        = true
     inline            = ["echo 'Reboot VM'", "sudo reboot"]
   }
 

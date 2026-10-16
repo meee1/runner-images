@@ -1,14 +1,7 @@
-| Announcements |
-|-|
-| [[Ubuntu] `ubuntu-latest` label will use Ubuntu 26.04 in November 2026](https://github.com/actions/runner-images/issues/14748) |
-| [[Ubuntu] Ubuntu 26.04 and Ubuntu 26.04 Arm64 are now generally available](https://github.com/actions/runner-images/issues/14747) |
-| [[Ubuntu] The Ubuntu 22 based runner images will begin deprecation on September 17th and will be fully unsupported by April 17th for GitHub Actions and Azure DevOps](https://github.com/actions/runner-images/issues/14254) |
-| [[Ubuntu] Ubuntu 26.04 and Ubuntu 26.04 Arm is now available as a public preview](https://github.com/actions/runner-images/issues/14226) |
-***
 # Ubuntu 26.04
 - OS Version: 26.04.1 LTS
-- Kernel Version: 7.0.0-1012-azure
-- Image Version: 20260927.149.1
+- Kernel Version: 7.0.0-38-generic
+- Image Version: 26.04.1
 - Systemd version: 259.5-0ubuntu3.4
 
 ## Installed Software
@@ -21,22 +14,23 @@
 - Dash 0.5.12-12ubuntu3
 - GNU C++: 13.4.0, 14.3.0, 15.2.0
 - GNU Fortran: 13.4.0, 14.3.0, 15.2.0
-- Kotlin 2.4.20
-- Node.js 24.21.0
+- Kotlin 2.4.21
+- Node.js 24.22.0
 - Perl 5.40.1
 - Python 3.14.4
 - Ruby 3.3.8
+- Swift 6.4.1
 
 ### Package Management
 - cpan 1.64
-- Helm 4.3.0
-- Homebrew 7.0.6
-- Npm 11.19.0
+- Helm 4.3.1
+- Homebrew 7.0.9
+- Npm 11.19.1
 - Pip 25.1.1
 - Pip3 25.1.1
-- Pipx 1.17.6
+- Pipx 1.17.10
 - RubyGems 3.6.7
-- Vcpkg (build from commit 07f4812200)
+- Vcpkg (build from commit c52f7bd748)
 - Yarn 1.22.22
 
 #### Environment variables
@@ -55,21 +49,21 @@ to accomplish this.
 
 ### Project Management
 - Ant 1.10.15
-- Gradle 9.8.0
+- Gradle 9.8.1
 - Maven 3.9.15
 
 ### Tools
-- Ansible 2.21.4
-- AzCopy 10.32.7 - available by `azcopy` and `azcopy10` aliases
-- Bazel 9.2.0
+- Ansible 2.21.5
+- AzCopy 10.32.8 - available by `azcopy` and `azcopy10` aliases
+- Bazel 9.3.0
 - Bazelisk 1.28.1
-- Bicep 0.47.16
+- Bicep 0.48.1
 - Buildah 1.42.1
-- CMake 4.4.3
-- CodeQL Action Bundle 2.27.1
+- CMake 4.4.4
+- CodeQL Action Bundle 2.27.2
 - Docker Amazon ECR Credential Helper 0.12.0
 - Docker Compose 5.1.3
-- Docker-Buildx 0.37.1
+- Docker-Buildx 0.38.0
 - Docker Client 29.4.2
 - Docker Server 29.4.2
 - Git 2.55.0
@@ -78,27 +72,27 @@ to accomplish this.
 - jq 1.8.1
 - Kind 0.33.0
 - Kubectl 1.37.1
-- Kustomize 5.8.1
+- Kustomize 5.8.3
 - Minikube 1.39.0
 - n 10.2.0
 - nvm 0.40.8
-- OpenSSL 3.5.5-1ubuntu3.5
+- OpenSSL 3.5.5-1ubuntu3.7
 - Packer 1.16.1
 - Podman 5.7.0
 - Skopeo 1.21.0-dev
 - yamllint 1.38.0
-- yq 4.53.6
+- yq 4.54.1
 - zstd 1.5.7
 - Ninja 1.13.2
 
 ### CLI Tools
-- AWS CLI 2.37.4
-- AWS CLI Session Manager Plugin 1.2.835.0
-- AWS SAM CLI 1.166.2
-- Azure CLI 2.90.0
-- Azure CLI (azure-devops) 1.0.8
-- GitHub CLI 2.101.0
-- Google Cloud CLI 586.0.0
+- AWS CLI 2.38.1
+- AWS CLI Session Manager Plugin 1.2.896.0
+- AWS SAM CLI 1.169.0
+- Azure CLI 2.91.0
+- Azure CLI (azure-devops) 1.0.9
+- GitHub CLI 2.102.0
+- Google Cloud CLI 589.0.0
 
 ### Java
 | Version            | Environment Variable |
@@ -111,7 +105,7 @@ to accomplish this.
 ### PHP Tools
 - PHP: 8.5.4
 - Composer 2.10.3
-- PHPUnit 8.5.55
+- PHPUnit 8.5.56
 ```
 Both Xdebug and PCOV extensions are installed, but only Xdebug is enabled.
 ```
@@ -123,22 +117,22 @@ Both Xdebug and PCOV extensions are installed, but only Xdebug is enabled.
 - Stack 3.11.1
 
 ### Rust Tools
-- Cargo 1.98.1
-- Rust 1.98.1
-- Rustdoc 1.98.1
+- Cargo 1.99.1
+- Rust 1.99.1
+- Rustdoc 1.99.1
 - Rustup 1.29.1
 
 #### Packages
-- Rustfmt 1.9.0
+- Rustfmt 1.10.0
 
 ### Browsers and Drivers
-- Google Chrome 154.0.8037.57
-- ChromeDriver 154.0.8037.57
-- Chromium 154.0.8037.0
-- Microsoft Edge 154.0.4258.37
-- Microsoft Edge WebDriver 154.0.4258.37
-- Selenium server 4.49.0
-- Mozilla Firefox 156.0
+- Google Chrome 155.0.8059.84
+- ChromeDriver 155.0.8059.84
+- Chromium 155.0.8059.0
+- Microsoft Edge 155.0.4283.60
+- Microsoft Edge WebDriver 155.0.4283.60
+- Selenium server 4.51.0
+- Mozilla Firefox 158.0
 - Geckodriver 0.37.1
 
 #### Environment variables
@@ -150,7 +144,7 @@ Both Xdebug and PCOV extensions are installed, but only Xdebug is enabled.
 | SELENIUM_JAR_PATH | /usr/share/java/selenium-server.jar   |
 
 ### .NET Tools
-- .NET Core SDK: 8.0.131, 8.0.206, 8.0.319, 8.0.425, 9.0.121, 9.0.205, 9.0.318, 10.0.112, 10.0.204, 10.0.303, 10.0.401
+- .NET Core SDK: 8.0.132, 8.0.206, 8.0.319, 8.0.426, 9.0.122, 9.0.205, 9.0.319, 10.0.113, 10.0.204, 10.0.303, 10.0.402
 - nbgv 3.10.94+dea9a6c17c
 
 ### Databases
@@ -178,23 +172,23 @@ Use the following command as a part of your job to start the service: 'sudo syst
 #### Go
 - 1.24.13
 - 1.25.14
-- 1.26.8
+- 1.26.9
 
 #### Node.js
 - 22.23.3
-- 24.21.0
+- 24.22.0
 
 #### Python
-- 3.10.21
-- 3.11.16
-- 3.12.14
-- 3.13.15
-- 3.14.7
+- 3.11.17
+- 3.12.15
+- 3.13.16
+- 3.14.8
+- 3.15.0
 
 #### PyPy
 - 3.9.19 [PyPy 7.3.16]
 - 3.10.16 [PyPy 7.3.19]
-- 3.11.16 [PyPy 8.0.0]
+- 3.11.17 [PyPy 8.0.1]
 
 #### Ruby
 - 3.2.11
@@ -203,11 +197,11 @@ Use the following command as a part of your job to start the service: 'sudo syst
 - 4.0.7
 
 ### PowerShell Tools
-- PowerShell 7.6.6
+- PowerShell 7.6.7
 
 #### PowerShell Modules
 - Az: 15.6.1
-- Microsoft.Graph: 2.40.0
+- Microsoft.Graph: 2.41.2
 - Pester: 5.9.0
 - PSScriptAnalyzer: 1.25.0
 
@@ -228,7 +222,7 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | CMake                      | 3.31.5<br>4.1.2                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Google Play services       | 49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Google Repository          | 58                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| NDK                        | 27.3.13750724 (default)<br>28.2.13676358<br>29.0.14206865                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| NDK                        | 27.3.13750724 (default)<br>29.0.14206865<br>30.0.16248370                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 #### Environment variables
 | Name                    | Value                                        |
@@ -236,7 +230,7 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | ANDROID_HOME            | /usr/local/lib/android/sdk                   |
 | ANDROID_NDK             | /usr/local/lib/android/sdk/ndk/27.3.13750724 |
 | ANDROID_NDK_HOME        | /usr/local/lib/android/sdk/ndk/27.3.13750724 |
-| ANDROID_NDK_LATEST_HOME | /usr/local/lib/android/sdk/ndk/29.0.14206865 |
+| ANDROID_NDK_LATEST_HOME | /usr/local/lib/android/sdk/ndk/30.0.16248370 |
 | ANDROID_NDK_ROOT        | /usr/local/lib/android/sdk/ndk/27.3.13750724 |
 | ANDROID_SDK_ROOT        | /usr/local/lib/android/sdk                   |
 
@@ -249,13 +243,13 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | aria2                  | 1.37.0+debian-4               |
 | autoconf               | 2.72-3.1ubuntu2               |
 | automake               | 1:1.18.1-3build1              |
-| bind9-dnsutils         | 1:9.20.24-1ubuntu0.3          |
+| bind9-dnsutils         | 1:9.20.24-1ubuntu0.4          |
 | binutils               | 2.46-3ubuntu2                 |
 | bison                  | 2:3.8.2+dfsg-1ubuntu0.26.04.1 |
 | brotli                 | 1.2.0-3build1                 |
 | bzip2                  | 1.0.8-6ubuntu0.1              |
 | coreutils              | 9.5-1ubuntu2+0.0.0\~ubuntu25  |
-| curl                   | 8.18.0-1ubuntu2.7             |
+| curl                   | 8.18.0-1ubuntu2.8             |
 | dbus                   | 1.16.2-2ubuntu4               |
 | dpkg                   | 1.23.7ubuntu1                 |
 | dpkg-dev               | 1.23.7ubuntu1                 |
@@ -271,10 +265,11 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | iproute2               | 6.19.0-1ubuntu1.1             |
 | iputils-ping           | 3:20250605-1ubuntu1           |
 | jq                     | 1.8.1-4ubuntu2                |
+| libcrypt-dev           | 1:4.5.1-1                     |
 | libicu-dev             | 78.2-2ubuntu1                 |
 | libnss3-tools          | 2:3.120-1ubuntu2.1            |
 | libsqlite3-dev         | 3.46.1-9ubuntu0.3             |
-| libssl-dev             | 3.5.5-1ubuntu3.5              |
+| libssl-dev             | 3.5.5-1ubuntu3.7              |
 | libtool                | 2.5.4-9                       |
 | libyaml-dev            | 0.2.5-2build3                 |
 | locales                | 2.43-2ubuntu2.4               |
@@ -283,7 +278,7 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | make                   | 4.4.1-3                       |
 | net-tools              | 2.10-2ubuntu1                 |
 | netcat                 | 1.234-1                       |
-| openssh-client         | 1:10.2p1-2ubuntu3.6           |
+| openssh-client         | 1:10.2p1-2ubuntu3.8           |
 | parallel               | 20240222+ds-3                 |
 | patchelf               | 0.18.0-1.4build1              |
 | pigz                   | 2.8-1build1                   |
@@ -294,9 +289,9 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | rsync                  | 3.4.1+ds1-7ubuntu0.3          |
 | shellcheck             | 0.11.0-2                      |
 | sqlite3                | 3.46.1-9ubuntu0.3             |
-| ssh                    | 1:10.2p1-2ubuntu3.6           |
+| ssh                    | 1:10.2p1-2ubuntu3.8           |
 | sshpass                | 1.10-0.1build1                |
-| sudo                   | 1.9.17p2-1ubuntu3.1           |
+| sudo                   | 1.9.17p2-1ubuntu3.2           |
 | swig                   | 4.4.0-1                       |
 | systemd-coredump       | 259.5-0ubuntu3.4              |
 | tar                    | 1.35+dfsg-4ubuntu0.4          |
@@ -305,7 +300,7 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | time                   | 1.9-0.4                       |
 | tk                     | 8.6.16build1                  |
 | tree                   | 2.3.1-1                       |
-| tzdata                 | 2026c-0ubuntu0.26.04.1        |
+| tzdata                 | 2026e-0ubuntu0.26.04.1        |
 | unzip                  | 6.0-29ubuntu1                 |
 | upx                    | 4.2.4-1.1build1               |
 | wget                   | 1.25.0-2ubuntu4.4             |
@@ -313,4 +308,3 @@ Use the following command as a part of your job to start the service: 'sudo syst
 | xz-utils               | 5.8.3-1                       |
 | zip                    | 3.0-15ubuntu3                 |
 | zsync                  | 0.6.2-9                       |
-
